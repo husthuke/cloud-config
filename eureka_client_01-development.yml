@@ -1,0 +1,12 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+zuul:
+  routes:
+    users:
+      path: /myusers/**
+      url: http://example.com/users_service
+    baidu:
+      path: /baidu/**
+      url: http://www.baidu.com
